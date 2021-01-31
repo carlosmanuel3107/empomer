@@ -1,0 +1,129 @@
+
+/*
+************************************************************************************
+*                                   Crear BD
+************************************************************************************
+*/
+
+/*
+* Creamos la base de datos empomer.
+*/
+CREATE DATABASE empomer;
+
+/*
+* Vamos a utilizar la base de datos empomer
+*/
+
+USE empomer;
+
+
+/*
+************************************************************************************
+*                                   Crear tablas
+************************************************************************************
+*/
+
+/*
+* Creamos la tabla rol.
+*/
+
+CREATE TABLE IF NOT EXISTS `rol` (
+  `rol_id` int(2) NOT NULL COMMENT 'Clave primaria',
+  `descripcion` varchar(20) NOT NULL COMMENT 'Descripcion',
+  PRIMARY KEY (`rol_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Tabla de rol';
+
+/*
+* Creamos la tabla usuario.
+*/
+
+CREATE TABLE IF NOT EXISTS `usuario` (
+  `user_id` int(40) NOT NULL COMMENT 'Clave primaria',
+   `nombres` varchar(40) NOT NULL COMMENT 'nombres del usuario',
+  `fecha_nacimiento` date NOT NULL,      
+  `e_mail` varchar(20) NOT NULL,
+  `contrasenia` varchar(20) NOT NULL,
+  `cliente_id` integer NOT NULL,
+  PRIMARY KEY (`user_id`),
+  FOREIGN KEY(`cliente_id`) REFERENCES cliente(`cliente_id`),
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Tabla de usuarios';
+
+/*
+* Creamos la tabla usuario_rol
+*/
+
+CREATE TABLE IF NOT EXISTS `usuario_rol` (  
+ `id` int(40) NOT NULL COMMENT 'Clave primaria',
+  `user_id` int(40) NOT NULL COMMENT 'Clave primaria y foranea',
+  `rol_id` int(2) NOT NULL COMMENT 'Clave primaria y foranea',  
+  FOREIGN KEY(`user_id`) REFERENCES usuario(`user_id`),
+  FOREIGN KEY(`rol_id`) REFERENCES rol(`rol_id`),
+  PRIMARY KEY(`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Tabla que relaciona a un usuarios con un rol';
+
+
+/*
+* Creamos la tabla cliente
+*/
+
+CREATE TABLE IF NOT EXISTS `cliente` (
+  `cliente_id` int(40) NOT NULL COMMENT 'Clave primaria',
+  `nombres` varchar(40) NOT NULL COMMENT 'Nombres del cliente',
+  `apellidos` varchar(40) NOT NULL COMMENT 'Apellidos  del cliente',
+  `estracto` int(1) NOT NULL COMMENT 'Estracto',  
+  `telefono` int(20) NOT NULL COMMENT 'Telefono',  
+  `direccion` varchar(40) NOT NULL COMMENT 'Direccion',  
+  `factura_id` int(100) NOT NULL COMMENT 'Numero de factura',  
+  PRIMARY KEY (`cliente_id`),
+  FOREIGN KEY(`factura_id`) REFERENCES Factura(`numero_factura`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Tabla de clientes';
+
+/*
+* Creamos la tabla factura
+*/
+
+CREATE TABLE IF NOT EXISTS `factura` (  
+  `numero_factura` int(100) NOT NULL COMMENT 'Clave primaria',  
+  `detalle_id` int(100) NOT NULL COMMENT 'Detalle',
+  `fecha_expedicion` date NOT NULL COMMENT 'Fecha de expedicion',  
+  FOREIGN KEY(`detalle_id`) REFERENCES detalle(`numero_detalle`),
+  PRIMARY KEY(`numero_factura`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Tabla de facturas';
+
+/*
+* Creamos la tabla categoria
+*/
+
+CREATE TABLE IF NOT EXISTS `categoria` (
+  `categoria_id` int(40) NOT NULL COMMENT 'Clave primaria',
+  `nombre` varchar(100) NOT NULL COMMENT 'Nombre',      
+  PRIMARY KEY (`categoria_id`)  
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Tabla de categorias';
+
+/*
+* Creamos la tabla ofrenda
+*/
+
+CREATE TABLE IF NOT EXISTS `ofrenda` (  
+  `ofrenda_id` int(40) NOT NULL COMMENT 'Clave primaria',  
+  `nombre` varchar(40) NOT NULL COMMENT 'Nombre',
+  `precio` float NOT NULL COMMENT 'Precio',    
+  `categoria_id` int(40) NOT NULL COMMENT 'Categoria_id',  
+  FOREIGN KEY(`categoria_id`) REFERENCES categoria(`categoria_id`),  
+  PRIMARY KEY(`ofrenda_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Tabla de ofrendas';
+
+/*
+* Creamos la tabla detalle
+*/
+
+CREATE TABLE IF NOT EXISTS `detalle` (  
+  `numero_detalle` int(40) NOT NULL COMMENT 'Clave primaria',  
+  `descripcion` varchar(100) NOT NULL COMMENT 'Descripcion',
+  `ofrenda_id` int(40) NOT NULL COMMENT 'Id de ofrenda',  
+  `fecha_inicio` date NOT NULL COMMENT 'Fecha de inicio',
+  `fecha_fin` date NOT NULL COMMENT 'Fecha de fin', 
+  FOREIGN KEY(`ofrenda_id`) REFERENCES ofrenda(`ofrenda_id`), 
+  PRIMARY KEY(`numero_detalle`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Tabla de detalles';
+
