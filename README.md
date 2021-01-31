@@ -27,7 +27,7 @@ listado de facturas.
 
 # Modelo físico de la Base de Datos
 
-![Modelo físico de la BD Empomer](https://raw.githubusercontent.com/dpdorado/app_empomer/main/bd/modelo_fisico.png)
+![Modelo físico de la BD Empomer](https://raw.githubusercontent.com/carlosmanuel3107/empomer/main/bd/modelo_fisico.png)
 
 >* Versión SQL: db/empomer_sql.txt
 
@@ -35,57 +35,57 @@ listado de facturas.
 
 >* Bienvenida : empomer/resources/views/welcome.blade.php
 
-![Modelo físico de la BD Empomer](https://raw.githubusercontent.com/dpdorado/app_empomer/main/screenshot/welcome.png)
+![Modelo físico de la BD Empomer](https://raw.githubusercontent.com/carlosmanuel3107/empomer/main/screenshot/welcome.png)
 
 >* Registro de usuarios : empomer/resources/views/auth/register.blade.php
 
-![Register](https://raw.githubusercontent.com/dpdorado/app_empomer/main/screenshot/register.png)
+![Register](https://raw.githubusercontent.com/carlosmanuel3107/empomer/main/screenshot/register.png)
 
 
 >* Inicio de sesión de usuarios : empomer/resources/views/auth/login.blade.php
 
-![Login](https://raw.githubusercontent.com/dpdorado/app_empomer/main/screenshot/login.png)
+![Login](https://raw.githubusercontent.com/carlosmanuel3107/empomer/main/screenshot/login.png)
 
 >* Home de usuario logueado : empomer/resources/views/center.blade.php
 
-![Home](https://raw.githubusercontent.com/dpdorado/app_empomer/main/screenshot/home.png)
+![Home](https://raw.githubusercontent.com/carlosmanuel3107/empomer/main/screenshot/home.png)
 
 >* Lsta de clientes registrados : empomer/resources/views/customers/index.blade.php
 
-![Register customers](https://raw.githubusercontent.com/dpdorado/app_empomer/main/screenshot/customers.png)
+![Register customers](https://raw.githubusercontent.com/carlosmanuel3107/empomer/main/screenshot/customers.png)
 
 >* Registro de clientes : empomer/resources/views/customers/register.blade.php
 
-![Register customers](https://raw.githubusercontent.com/dpdorado/app_empomer/main/screenshot/customers_create.png)
+![Register customers](https://raw.githubusercontent.com/carlosmanuel3107/empomer/main/screenshot/customers_create.png)
 
 >* Editar clientes : empomer/resources/views/customers/edit.blade.php
 
-![Update customers](https://raw.githubusercontent.com/dpdorado/app_empomer/main/screenshot/customers_edit.png)
+![Update customers](https://raw.githubusercontent.com/carlosmanuel3107/empomer/main/screenshot/customers_edit.png)
 
 >* Lsta de facturas registradas : empomer/resources/views/bills/index.blade.php
 
-![Register bills](https://raw.githubusercontent.com/dpdorado/app_empomer/main/screenshot/bills.png)
+![Register bills](https://raw.githubusercontent.com/carlosmanuel3107/empomer/main/screenshot/bills.png)
 
 >* Registro de facturas : empomer/resources/views/bills/register.blade.php
 
-![Register bills](https://raw.githubusercontent.com/dpdorado/app_empomer/main/screenshot/bills_create.png)
+![Register bills](https://raw.githubusercontent.com/carlosmanuel3107/empomer/main/screenshot/bills_create.png)
 
 >* Editar facturas : empomer/resources/views/bills/edit.blade.php
 
-![Update bills](https://raw.githubusercontent.com/dpdorado/app_empomer/main/screenshot/bills_edit.png)
+![Update bills](https://raw.githubusercontent.com/carlosmanuel3107/empomer/main/screenshot/bills_edit.png)
 
 
 >* Lsta de categorias registradas : empomer/resources/views/categories/index.blade.php
 
-![Register categories](https://raw.githubusercontent.com/dpdorado/app_empomer/main/screenshot/categories.png)
+![Register categories](https://raw.githubusercontent.com/carlosmanuel3107/empomer/main/screenshot/categories.png)
 
 >* Registro de categorias : empomer/resources/views/categories/register.blade.php
 
-![Register categories](https://raw.githubusercontent.com/dpdorado/app_empomer/main/screenshot/categories_create.png)
+![Register categories](https://raw.githubusercontent.com/carlosmanuel3107/empomer/main/screenshot/categories_create.png)
 
 >* Editar categorias : empomer/resources/views/categories/edit.blade.php
 
-![Update categorias](https://raw.githubusercontent.com/dpdorado/app_empomer/main/screenshot/categories_edit.png)
+![Update categorias](https://raw.githubusercontent.com/carlosmanuel3107/empomer/main/screenshot/categories_edit.png)
 
 
 # Requerimientos
