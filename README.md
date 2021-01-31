@@ -64,7 +64,7 @@ listado de facturas.
 
 >* Lsta de facturas registradas : empomer/resources/views/bills/index.blade.php
 
-![Register bills](https://raw.githubusercontent.com/dpdorado/app_empomer/main/screenshot/bill.png)
+![Register bills](https://raw.githubusercontent.com/dpdorado/app_empomer/main/screenshot/bills.png)
 
 >* Registro de facturas : empomer/resources/views/bills/register.blade.php
 
@@ -96,7 +96,7 @@ listado de facturas.
 
 # Descargar y correr la App Empomer
 
->1. *git clone repo*: clonamos el repositorio que aloja la aplicación.
+>1. *git clone https://github.com/carlosmanuel3107/empomer*: clonamos el repositorio que aloja la aplicación.
 >2. Nos ubicamos en el directorio empomer y descargamos las depencias con *composer install*.
 >3. Iniciamos los servicios *Xampp* especialmente *MySQL* y creamos la Basede Datos con nombre *empomer*.
 >4. Nos aseguramos que las migraciones esten creadas con el comando *php artisan migrate* y verificamos que las tablas esten creadas en la Base de Datos *empomer*.
